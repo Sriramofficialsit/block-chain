@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="./images/logo.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">DASHBOARD</a></li>
+            <li><a href="./course.html">DATABASE</a></li>
+            <li><a href="./blog.html">ABOUT</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>ABOUT US</h1>
+    </section>
+
+    <!--blog page content-->
+
+    <section class="blog-content">
+      <div class="row">
+        <div class="blog-left">
+          <img src="./images/certificate.jpg" alt="">
+          <h2>MY FULL-STACK DEVELOPMENT CARRIER STARTS WITH GUVI</h2>
+          <P>Hello there! I'm currently immersed in my studies at Guvi, focusing on the exhilarating realm of Full Stack Development. Guided by the comprehensive curriculum and expert guidance at Guvi, I am delving deep into both front-end and back-end technologies, honing my skills to become a proficient Full Stack Developer. This journey isn't just about mastering programming languages or frameworks; it's about embracing a mindset of innovation, problem-solving, and continuous learning. With each line of code I write, I am shaping my future career in technology, fueled by passion and determination. I envision myself contributing to groundbreaking projects, collaborating with diverse teams, and making a meaningful impact in the tech industry. The skills and knowledge I am acquiring at Guvi are not just for the present; they are paving the way for a dynamic and fulfilling career ahead, where I can thrive in the fast-paced world of Full Stack Development.</P>
+          <div class="comment-box">
+            <h3>Leave A Comment</h3>
+            <form class="comment-form">
+              <input type="text" placeholder="Enter Name">
+              <input type="email" placeholder="Enter Mail">
+              <textarea rows="5" placeholder="Your Comment"></textarea>
+              <button type="submit" class="hero-btn red-btn">Post Comment</button>
+            </form>
+          </div>
+        
+        
+        </div>
+        <div class="blog-right">
+          <h3 style="background-color: blueviolet;" >OUR STUDIES</h3>
+          <div>
+            <span>HTML</span>
+            <span>20%</span>
+          </div>
+          <div>
+            <span>CSS</span>
+            <span>35%</span>
+          </div>
+          <div>
+            <span>JAVA SCRIPT</span>
+            <span>38%</span>
+          </div>
+          <div>
+            <span>MY SQL</span>
+            <span>20%<span>
+          </div>
+          <div>
+            <span>BLOCKCHAIN</span>
+            <span>55%</span>
+          </div>
+          <div>
+            <span>REACT</span>
+            <span>20%</span>
+          </div>
+          <div>
+            <span>NODE</span>
+            <span>21%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--end-->
+
+
+    <section class="footer">
+      <h4>About Us</h4>
+      
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <body>
+    <section class="sub-header">
+      
+      <style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.verification{
+  background-color:rgb(255, 255, 255);
+  
+  padding: 100px 100px 100px 100px;
+}
+h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+input[type="file"] {
+    margin-top: 20px;
+}
+
+button {
+    margin-top:100px;
+    padding: 10px 20px;
+    background-color:transparent;
+    color: rgb(0, 0, 0);
+    border: solid rgb(53, 2, 58);
+    cursor: pointer;
+    border-radius: 6px;
+
+}
+button:hover
+{
+  background-color:rgb(216, 80, 12);
+  color: white;
+  box-shadow: black  1px 3px 1px;
+  
+  border: none;
+}
+
+
+img{
+  padding-left: 530px;
+  padding-top: 30px;
+}
+.up
+{
+  padding: 50px 200px 50px 200px;
+  border: solid rgb(53, 2, 58);
+  margin-bottom: 50px;
+  border-radius: 6px;
+  
+ 
+}
+.up:hover
+{
+  background-color: crimson;
+  color: white;
+  box-shadow: black  1px 3px 1px;
+  
+  border: none;
+}
+img{
+  display: rela;
+}
+
+      </style>
+      <nav>
+        <a href="index.html"><img src="./images/logo.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">MYPROFILE</a></li>
+            <li><a href="./course.html">DATABASE</a></li>
+            <li><a href="./blog.html">ABOUT</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Students DataBase</h1>
+    </section>
+    
+    <!-- about us content -->
+
+    <section class="about-us">
+      <div class="row" >
+        <div class="about-col" style="display: flex; align-items: center;">
+           <!-- <a href="./Responsive-HTML-Table-With-Pure-CSS---Web-Design-UI-Design-main/index.html" class="hero-btn red-btn" >CLICKHERE</a> -->
+        </div>
+       
+
+      </div>
+    </section>
+    
+    <div class="verification">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Encryption & QR Code Generation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    <h1>Upload The Certificates</h1>
+    <input style="
+    display: none;
+    background-color:transparent;
+    border: solid rgb(53, 2, 58);
+    padding: 30px 30px 30px 30px;
+    border-radius: 6px;" type="file" id="documentFile" accept=".pdf,.doc,.docx,.xls,.xlsx"> 
+    
+    <br>
+    <label class="up"  for="documentFile">Upload Here...</label> <br>
+    <button  onclick="handleUpload()">Upload</button>
+    <div id="qrCodeContainer"></div>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="footer">
+      <h4>About Us</h4>
+      
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    
+    </section>
+
+    <script src="script.js"></script>
+    <script>function handleUpload() {
+      const documentFile = document.getElementById('documentFile').files[0];
+      if (!documentFile) {
+          alert("Please select a file to upload.");
+          return;
+      }
+  
+      const reader = new FileReader();
+      reader.onload = function(event) {
+          const documentData = event.target.result;
+          const uniqueCode = generateUniqueCode();
+          const encryptedDocument = encryptDocument(documentData, uniqueCode);
+          generateQRCode(encryptedDocument);
+      }
+      reader.readAsDataURL(documentFile);
+  }
+  
+  function generateUniqueCode() {
+      // Implement your unique code generation logic here
+      // For demonstration purpose, generating a random code
+      return Math.random().toString(36).substr(2, 9);
+  }
+  
+  function encryptDocument(documentData, uniqueCode) {
+      // Convert binary document data to Base64 string
+      const base64String = btoa(String.fromCharCode(...new Uint8Array(documentData)));
+      
+      // Implement your encryption logic here
+      // Using CryptoJS AES encryption as an example
+      const encrypted = CryptoJS.AES.encrypt(base64String, uniqueCode).toString();
+      return encrypted;
+  }
+  
+  function generateQRCode(data) {
+      const qrCodeContainer = document.getElementById('qrCodeContainer');
+      qrCodeContainer.innerHTML = ""; // Clear previous QR code if any
+  
+      const qr = new QRCode(qrCodeContainer, {
+          text: data,
+          width: 256,
+          height: 256,
+          colorDark : "#000000",
+          colorLight : "#ffffff",
+          correctLevel : QRCode.CorrectLevel.H
+      });
+  }
+  </script>
+  </body>
+</html>
+s

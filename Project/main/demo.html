@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document Upload</title>
+<style>
+    #verificationCode {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <input type="file" id="documentInput" accept=".pdf, .doc, .docx">
+    <button onclick="uploadDocument()">Upload Document</button>
+    <p id="verificationCode"></p>
+
+    <script>
+        function generateUniqueCode() {
+            // Generate a unique code (you can use any method you prefer)
+            return Math.random().toString(36).substr(2, 9);
+        }
+
+        function uploadDocument() {
+            var input = document.getElementById('documentInput');
+            var file = input.files[0];
+            var uniqueCode = generateUniqueCode();
+
+            // You can upload the document to a server using AJAX or perform any other operation here
+            // For demonstration, we'll just display the unique code
+            document.getElementById('verificationCode').innerText = "Your unique code: " + uniqueCode;
+            document.getElementById('verificationCode').style.display = "block";
+        }
+    </script>
+</body>
+</html>

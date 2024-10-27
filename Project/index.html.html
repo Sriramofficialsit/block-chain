@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CertifyCheck <i class="fa-solid fa-user"></i></title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="html" href="index.html">
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+
+</head>
+<body>
+    <header>
+        <div><img src="./Images/logo.png" alt="logo" height="50px" class="Logo"></div>
+    </header>
+<div class="wrapper">
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form name="loginForm"   action="./main/index.html">
+            <div class="input-box">
+                <span class="icoin"><ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" name="userid" required value="Sriram@083">   
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <!-- <h2>Password</h2> -->
+                <span class="icoin"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password"  name="pwd" required value="2005">
+                <label>Password</label>
+            </div>
+            <div class="Rem-forgot">
+                <label><input type="checkbox" required>Remember me</label>
+                <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" class="btn" onclick="return check(this.form)" >Login</button>
+            
+
+            <div class="Login-register">
+            <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+            </div>
+        </form>
+      </div> 
+ </div>
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+    function check(form)
+    {
+        if(form.userid.value=="Sriram@083" && form.pwd.value=="2005")
+        {
+            return true;
+        }
+        else{
+            alert("Incorrect Password or UserName")
+            return false;
+        }
+    }
+</script>
+
+
+</body>
+</html>
